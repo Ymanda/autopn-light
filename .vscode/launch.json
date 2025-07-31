@@ -1,0 +1,24 @@
+{
+  "configurations": [
+    
+    {"name":"Python Debugger: Current File","type":"debugpy","request":"launch","program":"${file}","console":"integratedTerminal"},
+    {
+      "type": "debugpy",
+      "request": "launch",
+      "name": "Launch email_gpt_reply.py",
+      "program": "${workspaceFolder}/${input:pythonFilePath}",
+      "envFile": "${workspaceFolder}/.env",
+      "python": "${workspaceFolder}/autopn/bin/python"
+    }
+  ],
+  "inputs": [
+    {
+      "type": "pickString",
+      "id": "pythonFilePath",
+      "description": "Select the Python file to debug",
+      "options": [
+        "email_gpt_reply.py"
+      ]
+    }
+  ]
+}
