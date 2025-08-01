@@ -1,10 +1,7 @@
 import os
-import imaplib
-import email
-from email.header import decode_header
-from email.utils import parsedate_to_datetime
-import html2text
 from dotenv import load_dotenv
+from imapclient import IMAPClient
+import pyzmail
 import openai
 from datetime import datetime
 
@@ -13,93 +10,18 @@ load_dotenv()
 EMAIL_ADDRESS = os.getenv("EMAIL_ADDRESS")
 EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD")
 PERSON_EMAIL = os.getenv("PERSON_EMAIL")
-CONTEXT_FILES = [f.strip() for f in os.getenv("CONTEXT_FILES", "").split(",") if f.strip()]
+CONTEXT_FILES = os.getenv("CONTEXT_FILES", "").split(",")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 ARCHIVE_DIR = "archives_emails"
-os.makedirs(ARCHIVE_DIR, exist_ok=True)
-
-if not EMAIL_ADDRESS or not EMAIL_PASSWORD or not PERSON_EMAIL or not OPENAI_API_KEY:
-    raise ValueError("❌ Variables manquantes dans le .env")
-
 openai.api_key = OPENAI_API_KEY
-
-def connect_gmail():
-    try:
-        mail = imaplib.IMAP4_SSL("imap.gmail.com")
-        mail.login(EMAIL_ADDRESS, EMAIL_PASSWORD)
-        mail.select("inbox")
-        return mail
-    except Exception as e:
-        print("❌ Erreur de connexion :", e)
-        return None
-
-def clean_subject(subject):
-    if subject is None:
-        return "(Sans objet)"
-    decoded, charset = decode_header(subject)[0]
-    return decoded.decode(charset or "utf-8", errors="replace") if isinstance(decoded, bytes) else decoded
-
-def extract_body(msg):
-    for part in msg.walk():
-        content_type = part.get_content_type()
-        content_dispo = str(part.get("Content-Disposition"))
-        if "attachment" in content_dispo:
-            continue
-        try:
-            charset = part.get_content_charset() or "utf-8"
-            if content_type == "text/plain":
-                return part.get_payload(decode=True).decode(charset, errors="replace")
-            elif content_type == "text/html":
-                html = part.get_payload(decode=True).decode(charset, errors="replace")
-                return html2text.html2text(html)
-        except Exception as e:
-            continue
-    return "(Pas de contenu lisible)"
-
-def download_emails():
-    mail = connect_gmail()
-    if not mail:
-        return
-
-    result, data = mail.search(None, f'(OR FROM "{PERSON_EMAIL}" TO "{PERSON_EMAIL}")')
-    if result != 'OK':
-        print("❌ Échec de la recherche IMAP")
-        return
-
-    message_ids = data[0].split()
-    emails_by_year = {}
-
-    for num in message_ids:
-        result, msg_data = mail.fetch(num, '(RFC822)')
-        if result != 'OK':
-            continue
-
-        raw_email = msg_data[0][1]
-        msg = email.message_from_bytes(raw_email)
-        sender = email.utils.parseaddr(msg.get("From"))[1]
-        subject = clean_subject(msg.get("Subject"))
-        date_obj = parsedate_to_datetime(msg.get("Date"))
-        year = date_obj.year
-        body = extract_body(msg)
-
-        entry = (
-            date_obj,
-            f"=== [{date_obj}] De: {sender} ===\nObjet : {subject}\n\n{body.strip()}\n\n"
-        )
-        emails_by_year.setdefault(year, []).append(entry)
-
-    for year, entries in emails_by_year.items():
-        entries.sort(key=lambda x: x[0])
-        with open(f"{ARCHIVE_DIR}/echange_{year}.txt", "w", encoding="utf-8") as f:
-            f.write("\n".join([entry for _, entry in entries]))
 
 def build_context(max_words=6000):
     total_words = 0
     lines = []
 
     for filename in CONTEXT_FILES:
-        filepath = os.path.join(ARCHIVE_DIR, filename)
+        filepath = os.path.join(ARCHIVE_DIR, filename.strip())
         if not os.path.exists(filepath):
             print(f"⚠️ Fichier introuvable : {filepath}")
             continue
@@ -120,6 +42,39 @@ def build_context(max_words=6000):
 
     print(f"✅ Contexte généré : {total_words} mots dans 'contexte_actuel.txt'")
 
+def fetch_last_email_from(person_email):
+    with IMAPClient("imap.gmail.com") as server:
+        server.login(EMAIL_ADDRESS, EMAIL_PASSWORD)
+        server.select_folder("INBOX")
+
+        criteria = ['FROM', person_email]
+        messages = server.search(criteria)
+        if not messages:
+            print("❌ Aucun message trouvé.")
+            return None
+
+        last_id = sorted(messages)[-1]
+        response = server.fetch([last_id], ['ENVELOPE', 'RFC822'])
+        raw_message = pyzmail.PyzMessage.factory(response[last_id][b'RFC822'])
+
+        date = response[last_id][b'ENVELOPE'].date
+        subject = raw_message.get_subject()
+        sender = raw_message.get_addresses('from')[0][1]
+
+        if raw_message.text_part:
+            body = raw_message.text_part.get_payload().decode(raw_message.text_part.charset, errors='replace')
+        elif raw_message.html_part:
+            body = "(HTML uniquement - ignoré)"
+        else:
+            body = "(Aucun contenu)"
+
+        return {
+            "date": date,
+            "subject": subject,
+            "from": sender,
+            "body": body.strip()
+        }
+
 def generer_reponse(nouveau_message: str):
     with open("contexte_actuel.txt", encoding="utf-8") as f:
         contexte = f.read()
@@ -136,11 +91,11 @@ Ignore les provocations, clarifie les points importants, et ferme la discussion 
         {"role": "user", "content": f"Voici le nouveau message reçu :\n{nouveau_message}\n\nQuelle réponse Yannick doit-il envoyer ?"}
     ]
 
-    print("⏳ Génération de la réponse...")
+    print("⏳ Génération de la réponse en cours...")
     completion = openai.ChatCompletion.create(
         model="gpt-4o",
         messages=messages,
-        temperature=0.4
+        temperature=0.5
     )
 
     reponse = completion.choices[0].message.content
@@ -149,12 +104,16 @@ Ignore les provocations, clarifie les points importants, et ferme la discussion 
 
 # --- Utilisation ---
 if __name__ == "__main__":
-    print("1) 📥 Archivage des e-mails...")
-    download_emails()
-
-    print("2) 🧠 Construction du contexte (max 6000 mots)...")
+    print("1) Construction du contexte (max 6000 mots)...")
     build_context()
 
-    print("3) 📨 Colle ci-dessous le message reçu :")
-    nouveau = input("\nMessage :\n")
-    generer_reponse(nouveau)
+    print("2) Récupération du dernier message...")
+    email_data = fetch_last_email_from(PERSON_EMAIL)
+
+    if email_data:
+        nouveau = f"""Message reçu le {email_data['date']} de {email_data['from']} :
+Objet : {email_data['subject']}
+
+{email_data['body']}
+"""
+        generer_reponse(nouveau)

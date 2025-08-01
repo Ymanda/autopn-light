@@ -1,0 +1,79 @@
+- category: Diversion
+  name: Homme de paille
+  description: Déformer la position de l'autre pour la rendre plus facile à attaquer.
+
+- category: Diversion
+  name: Hors sujet / diversion
+  description: Répondre à côté pour éviter de traiter le sujet principal.
+
+- category: Diversion
+  name: Red herring (fausse piste)
+  description: Introduire un sujet émotionnel ou secondaire pour brouiller la discussion.
+
+- category: Diversion
+  name: Glissement de sujet
+  description: Déplacer le débat vers un autre sujet sans le dire clairement.
+
+- category: Manipulation émotionnelle
+  name: Victimisation
+  description: Se présenter en victime pour éviter la responsabilité.
+
+- category: Manipulation émotionnelle
+  name: Appel à la pitié
+  description: Rechercher l'empathie pour faire céder l'autre.
+
+- category: Manipulation émotionnelle
+  name: Culpabilisation
+  description: Utiliser la honte ou la culpabilité pour contrôler.
+
+- category: Manipulation émotionnelle
+  name: Chantage affectif
+  description: Conditionner l’amour ou le lien à une obéissance.
+
+- category: Autorité ou légitimité
+  name: Argument d'autorité
+  description: S'imposer sans logique en invoquant un statut (parent, ancien, etc).
+
+- category: Autorité ou légitimité
+  name: Appel à la tradition
+  description: Justifier quelque chose par "on a toujours fait comme ça".
+
+- category: Autorité ou légitimité
+  name: Appel au rôle familial
+  description: Invoquer un rôle social ("bon fils", "bonne mère") pour imposer une norme.
+
+- category: Inversion et falsification
+  name: Inversion accusatoire
+  description: Accuser l'autre de ce que l'on fait soi-même.
+
+- category: Inversion et falsification
+  name: Projection psychologique
+  description: Prêter à l'autre ses propres intentions ou défauts.
+
+- category: Inversion et falsification
+  name: Contradiction / Mensonge flagrant
+  description: Nier un propos ou un engagement précédent sans justification.
+
+- category: Mauvaise foi
+  name: Esquive / absence de réponse
+  description: Ignorer une question posée ou répondre à côté.
+
+- category: Mauvaise foi
+  name: Demande impossible
+  description: Fixer des conditions irréalistes ou incompatibles.
+
+- category: Mauvaise foi
+  name: Double discours
+  description: Tenir des propos contradictoires dans le temps sans cohérence.
+
+- category: Saturation
+  name: Argumentation en rafale
+  description: Envoyer un grand nombre de reproches pour noyer la discussion.
+
+- category: Saturation
+  name: Confusion volontaire
+  description: Mélanger les faits, dates ou rôles pour créer du flou.
+
+- category: Saturation
+  name: Fausse liste de reproches
+  description: Accumuler des accusations vagues ou sans preuves.
