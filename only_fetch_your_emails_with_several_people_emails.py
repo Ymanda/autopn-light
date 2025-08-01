@@ -7,14 +7,14 @@ import re
 
 # === CONFIGURATION ===
 IMAP_SERVER = "imap.gmail.com"
-EMAIL_ACCOUNT = "y.mandaba@gmail.com"
-EMAIL_PASSWORD = "kiyx zoyd uqjo cfoo"
-DEST_FOLDER = "txt_y.mandaba"
-ME = "y.mandaba@gmail.com"
+EMAIL_ACCOUNT = "your email"
+EMAIL_PASSWORD = "" # App Password if gmail/google
+DEST_FOLDER = "txt_youremail"
+ME = "your email"
 OTHERS = [  # Liste d'adresses
-    "mymmandaba@gmail.com",
-    "maryvonnemm@gmail.com"
-    "maryvonne.mandaba@free.fr"
+    "other_person_first_email@gmail.com",
+    "other_person_second_email@gmail.com",
+    "second_person_second_email@gmail.com"
     # Ajouter d'autres e-mails ici si besoin
 ]
 
