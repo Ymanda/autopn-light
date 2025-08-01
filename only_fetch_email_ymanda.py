@@ -8,7 +8,7 @@ import re
 # === CONFIGURATION ===
 IMAP_SERVER = "imap.gmail.com"
 EMAIL_ACCOUNT = "ymanda@gmail.com"
-EMAIL_PASSWORD = "nsro bcnp djmn euys"
+EMAIL_PASSWORD = ""
 DEST_FOLDER = "txt_ymanda"
 ME = "ymanda@gmail.com"
 OTHER = "mymmandaba@gmail.com"

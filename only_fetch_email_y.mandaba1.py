@@ -18,7 +18,7 @@ import time
 # === CONFIGURATION ===
 IMAP_SERVER = "imap.gmail.com"
 EMAIL_ACCOUNT = "y.mandaba@gmail.com"
-EMAIL_PASSWORD = "kiyx zoyd uqjo cfoo"
+EMAIL_PASSWORD = ""
 DEST_FOLDER = "txt_y.mandaba"
 ME = "y.mandaba@gmail.com"
 OTHERS = [  # Liste d'adresses
