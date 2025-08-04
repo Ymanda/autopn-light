@@ -1,30 +1,29 @@
+# feature : Multiline
+
 import os
 import re
 from datetime import datetime
 
-# === CONFIGURATION ===
-WHATSAPP_FILE = "whatsapp_export.txt"
-DEST_FOLDER = "txt"
+WHATSAPP_FILE = "WhatsApp-Chat-withy-YMum-Freebox.txt"
+DEST_FOLDER = "txt_whatsapp"
 LIMIT_YEAR_FROM = 2000
 LIMIT_YEAR_TO = 2030
 
-# Format WhatsApp : "31/12/23, 21:45 - Marc: Salut !"
-WHATSAPP_LINE = re.compile(r"^(\d{1,2}/\d{1,2}/\d{2,4}), (\d{1,2}:\d{2}) - ([^:]+): (.*)$")
+WHATSAPP_LINE = re.compile(
+    r"^(\d{1,2}/\d{1,2}/\d{2,4}), (\d{1,2}:\d{2})\s*[\u202f ]?(AM|PM|am|pm)? - ([^:]+): (.*)$"
+)
 
-
-def parse_datetime(date_str, time_str):
-    for fmt in ["%d/%m/%y", "%d/%m/%Y"]:
+def parse_datetime(date_str, time_str, ampm):
+    for fmt in ["%m/%d/%y", "%m/%d/%Y"]:
         try:
-            date = datetime.strptime(date_str, fmt)
-            break
-        except:
+            if ampm:
+                dt = datetime.strptime(f"{date_str} {time_str} {ampm.upper()}", f"{fmt} %I:%M %p")
+            else:
+                dt = datetime.strptime(f"{date_str} {time_str}", f"{fmt} %H:%M")
+            return dt
+        except Exception:
             continue
-    else:
-        return None
-
-    dt = datetime.strptime(f"{date_str} {time_str}", f"{fmt} %H:%M")
-    return dt
-
+    return None
 
 def parse_whatsapp():
     if not os.path.exists(WHATSAPP_FILE):
@@ -36,33 +35,48 @@ def parse_whatsapp():
     with open(WHATSAPP_FILE, "r", encoding="utf-8") as f:
         lines = f.readlines()
 
+    messages = []
+    current = None
+
     for line in lines:
         match = WHATSAPP_LINE.match(line)
-        if not match:
-            continue
+        if match:
+            # Save previous message
+            if current:
+                messages.append(current)
+            date_str, time_str, ampm, author, message = match.groups()
+            dt = parse_datetime(date_str, time_str, ampm)
+            if not dt or not (LIMIT_YEAR_FROM <= dt.year <= LIMIT_YEAR_TO):
+                current = None
+                continue
+            current = {
+                "date": dt,
+                "author": author,
+                "message": message.strip()
+            }
+        else:
+            # Continuation of previous message
+            if current:
+                current["message"] += "\n" + line.strip()
 
-        date_str, time_str, author, message = match.groups()
-        dt = parse_datetime(date_str, time_str)
-        if not dt:
-            continue
+    if current:
+        messages.append(current)
 
-        year = dt.year
-        if not (LIMIT_YEAR_FROM <= year <= LIMIT_YEAR_TO):
-            continue
-
-        date_fmt = dt.strftime("%Y-%m-%d")
+    for msg in messages:
+        date_fmt = msg["date"].strftime("%Y-%m-%d")
         output = f"""
 === MESSAGE ===
 🗕 Date : {date_fmt}
-👤 From : {author}
+👤 From : {msg['author']}
 📨 To   : Yannick
 🧕 Subject : WhatsApp
 ---
-{message}
+{msg['message']}
 === FIN ===
 """.strip()
 
-        filename = os.path.join(DEST_FOLDER, f"emails_{year}.txt")
+        year = msg["date"].year
+        filename = os.path.join(DEST_FOLDER, f"whatsapp_{year}.txt")
         if os.path.exists(filename):
             with open(filename, "r", encoding="utf-8") as f:
                 if output in f.read():
@@ -72,7 +86,6 @@ def parse_whatsapp():
             f.write(output + "\n\n")
 
     print("✅ WhatsApp intégré avec succès.")
-
 
 if __name__ == "__main__":
     parse_whatsapp()
