@@ -1,0 +1,18 @@
+# "argument" in this case an information that is supposed to participate into proving something.
+# ARGUMENT_CLASS "INVALID" "NEGLIGEABLE_IMPACT" "UNRELATED" "BASED_ON_PREJUDICE_or_SUPOSITION" "VALID_little_impact" "VALID" "VALID_Strong impact" "VALID_AS_PROOF" : this is the class of the argument, it can be used to filter arguments.
+# ARGUMENT_USE : we count if used in good faith or in a sophisme manipulative pattern.
+# ARGUMENT_SUSPECTED_HIDDEN_TARGET : this is the target that the argument is supposed to hide, it can be used to filter arguments.
+# ARGUMENT_JUSTIFIED_BY_PARENT_ARGUMENTS list : this is the parent argument that justifies the current argument.
+# ARGUMENTS_JUSTIFIED_BY_FACTS list : this is the facts that justify the current argument.
+# ARGUMENT_IS_FACT_by_PROOF : if ARGUMENT_CLASS = VALID_AS_PROOF then ARGUMENT_IS_FACT=TRUE else ARGUMENT_IS_FACT=FALSE : this is the fact that is used to justify the argument.
+# ARGUMENT_FACTUALITY : When ARGUMENT noot as FACT then we give a Factuality % to the argument, it can be used to filter arguments.
+# ARGUMENT_IS_REPEATED : total count.
+# ARGUMENT_IS_REPEATED_BY_X : this is the argument that is repeated by the participants, array(count by each participants).
+# ARGUMENT_IS_FACT_BY_CONSENSUS: TRUE|FALSE IF each participant have used the argument or the argument was never challenged. If challenged after a long time of conscensus then it should be flagged "Suspicious argument".
+# ARGUMENT_SUSPICIOUS : Whenever the argument is suspected to be used for sophisme or a manipulation, it can be used to filter arguments in finding HIDDEN_OBJECIVES_THEMES.
+# HIDDIN_OJECTIVES_THEMES : this is the themes that are hidden by the argument, it can be used to describe Manupulation purpose and prcess.
+# DECLARED_OBJECTIVES_THEMES : this is the themes that are declared by the intervenants.
+# OBJECTIVES_themes (HIDDEN OR DECLARED) have a PERSON as author, and a persno or a theme as target.
+
+# We will try to use csv and txt file rather than a database, but if it can help to be adatabase let's do it. We are playing with lng texts maybe in database we do not handle content but only indexes and relations, but I'a rather experiment an apllication that is not realy a proggram but that relies on Chat GPT langue skills and nothions of words
+# Many of our functions will not be python programs but python will pass brides f text to Chat GPT with a precise format rendering instrucrtion and to process through txt files and generate theoutput of the functions. The idea here is not to process thigns programatically but GPTtically.
