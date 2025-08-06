@@ -1,11 +1,10 @@
-# feature : Multiline
-
+# feature : Multiline + fallback encodage sans chardet
 import os
 import re
 from datetime import datetime
 
-WHATSAPP_FILE = "WhatsApp-Chat-withy-YMum-Freebox.txt"
-DEST_FOLDER = "txt_whatsapp"
+WHATSAPP_FILE = "relations/Bee/WhatsApp Chat with Bee Baby"
+DEST_FOLDER = "relations/Bee/txt_whatsapp"
 LIMIT_YEAR_FROM = 2000
 LIMIT_YEAR_TO = 2030
 
@@ -25,6 +24,15 @@ def parse_datetime(date_str, time_str, ampm):
             continue
     return None
 
+def read_lines_fallback(filepath):
+    try:
+        with open(filepath, "r", encoding="utf-8") as f:
+            return f.readlines()
+    except UnicodeDecodeError:
+        print("⚠️ Erreur UTF-8, tentative en latin1...")
+        with open(filepath, "r", encoding="latin1") as f:
+            return f.readlines()
+
 def parse_whatsapp():
     if not os.path.exists(WHATSAPP_FILE):
         print(f"❌ Fichier introuvable : {WHATSAPP_FILE}")
@@ -32,16 +40,13 @@ def parse_whatsapp():
 
     os.makedirs(DEST_FOLDER, exist_ok=True)
 
-    with open(WHATSAPP_FILE, "r", encoding="utf-8") as f:
-        lines = f.readlines()
-
+    lines = read_lines_fallback(WHATSAPP_FILE)
     messages = []
     current = None
 
     for line in lines:
         match = WHATSAPP_LINE.match(line)
         if match:
-            # Save previous message
             if current:
                 messages.append(current)
             date_str, time_str, ampm, author, message = match.groups()
@@ -51,11 +56,10 @@ def parse_whatsapp():
                 continue
             current = {
                 "date": dt,
-                "author": author,
+                "author": author.strip(),
                 "message": message.strip()
             }
         else:
-            # Continuation of previous message
             if current:
                 current["message"] += "\n" + line.strip()
 
