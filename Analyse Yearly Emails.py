@@ -4,8 +4,8 @@ from datetime import datetime
 
 # === Configuration ===
 YEAR = "2024"
-INPUT_FILE = f"txt/emails_{YEAR}.txt"
-OUTPUT_FILE = f"rapport/{YEAR}_sophismes.md"
+INPUT_FILE = f"relations/Maryvonne/txt_y.mandaba_full1/emails_{YEAR}.txt"
+OUTPUT_FILE = f"relations/Maryvonne/txt_y.mandaba_full1/sophismes/emails_{YEAR}_sophismes.md"
 MODEL = "gpt-4o"
 CHUNK_SIZE = 6000  # characters
 
@@ -15,7 +15,7 @@ Tu es un analyste spécialisé en communication manipulatoire.
 Voici un extrait d'e-mails entre Yannick et sa mère pour l'année {year}.
 
 Ta tâche :
-- Identifier les sophismes utilisés par sa mère (pas ceux de Yannick)
+- Identifier les sophismes utilisés par sa mère (et ceux de Yannick)
 - Classer chaque sophisme (catégorie, nom)
 - Expliquer pourquoi il s'agit d'un sophisme
 - Résumer les points importants abordés dans cet extrait (terrains, entreprises, conflits familiaux)
