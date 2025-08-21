@@ -1,4 +1,4 @@
-#!/home/debian/Sites/autopn/.venv/bin/python3.11
+#!/home/debian/Sites/autopn/.venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
