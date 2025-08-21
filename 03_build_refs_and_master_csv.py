@@ -379,7 +379,7 @@ def main():
 
 
         # 4) Topics aggregation (FULL tables, with tuning) + rollup + conclusions
-    from collections import defaultdict, Counter
+    
 
     topics_master_rows = []
     topics_rollup_rows = []
