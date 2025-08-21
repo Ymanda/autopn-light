@@ -1,0 +1,24 @@
+{
+  "year": 2024,
+  "seq": 115,
+  "meta": {
+    "date": "2024-06-13",
+    "from": "maryvonne.masseron@free.fr",
+    "to": "'''Yannick Mandaba''' <y.mandaba@gmail.com>, trs.mandaba@gmail.com",
+    "subject": "inscription à un compte LUMNI (fini le niveau primaire)"
+  },
+  "proposals": [
+    {
+      "index": -115,
+      "etiquette": "Frais d'école / bus Tristan",
+      "category": "MIN",
+      "duration": "LT",
+      "source": "AI",
+      "score": 1,
+      "matched_from": [
+        "ai_new"
+      ]
+    }
+  ],
+  "raw_excerpt": "🗕 Date : 2024-06-13\n👤 From : maryvonne.masseron@free.fr\n📨 To   : '''Yannick Mandaba''' <y.mandaba@gmail.com>, trs.mandaba@gmail.com\n🧕 Subject : inscription à un compte LUMNI (fini le niveau primaire)\n---\nhttps://www.lumni.fr/dossier/la-grande-librairie-concours-de-lecture-a-voix-haute\n\nTristan doit se créer un compte sur Lumni\nniveau collège\nclasse de 6eme\n\nje l'ai déjà demandé plusieurs fois\n\nnous pourrons progresser dans la compréhension du français\nen cohésion avec ce qui se passe dans les écoles du système français\n\nmaryvonne masseron - 41 rue du puits-mauger  35000  rennes  0299302000  0783359723"
+}

@@ -1,0 +1,35 @@
+{
+  "year": 2022,
+  "seq": 179,
+  "meta": {
+    "date": "2022-09-20",
+    "from": "maryvonne masseron-mandaba <maryvonnemm@hotmail.com>",
+    "to": "\"Yannick Mandaba (AGA - Jewelry)\" <y.mandaba@jewelry-project.com>,",
+    "subject": "TR: Je ne demande que cela. J'ai donné tout le reste, déjà."
+  },
+  "proposals": [
+    {
+      "index": -179,
+      "etiquette": "Paiements via Western Union",
+      "category": "MIN",
+      "duration": "LT",
+      "source": "AI",
+      "score": 1,
+      "matched_from": [
+        "ai_new"
+      ]
+    },
+    {
+      "index": -179,
+      "etiquette": "Frais bus Tristan",
+      "category": "MIN",
+      "duration": "LT",
+      "source": "AI",
+      "score": 1,
+      "matched_from": [
+        "ai_new"
+      ]
+    }
+  ],
+  "raw_excerpt": "🗕 Date : 2022-09-20\n👤 From : maryvonne masseron-mandaba <maryvonnemm@hotmail.com>\n📨 To   : \"Yannick Mandaba (AGA - Jewelry)\" <y.mandaba@jewelry-project.com>,\n\t\"y.mandaba@gmail.com\" <y.mandaba@gmail.com>\n🧕 Subject : TR: Je ne demande que cela. J'ai donné tout le reste, déjà. \n---\nPourquoi naurais-tu pas reu cette photo ?\nEnvoy  partir de Courrier pour Windows\n\nDe : postmaster@outlook.com\nEnvoy le :mercredi 14 septembre 2022 12:58\nObjet :Non remis : Je ne demande que cela. J'ai donn tout le reste, dj.\n\n\nchec de la remise pour ces destinataires ou groupes :\n\nY.mandaba@hotmail.com (Y.mandaba@hotmail.com)\nNous avons rencontr un problme de communication lors de la remise de ce message. Essayez de renvoyer ce dernier plus tard. Si le problme persiste, contactez ladministrateur de votre courrier.\n\n\n\n\n\n\nInformations de diagnostic pour les administrateurs :\n\nServeur de gnration : AM9PR02MB6548.eurprd02.prod.outlook.com\n\nY.mandaba@hotmail.com\nRemote Server returned '550 5.5.0 Requested action not taken: mailbox unavailable (S2017062302).'\n\nEn-ttes de message d'origine :\n\nARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;\n\n b=J9E1/X3CpQ8dNKZZPcG4SmPHolsQZ2lEjD1Y9/zlBpxwTkg/eDMrTE8jKJw9rswMv7h9q2lwVjmicPU8MBN5CHRvOWCM7O+pBoMCEWf4VEdzs1ouknYXs+UgF32imLaqtgxSAgvi+6a4RJclThrl/zxI/j/CWOSfsXIVIuIMSHWspgBx2U0RpKuThc+Vfxas8Z5TZBiF4g9yLCwdDTa/yCMt+3K1vJlhADwh7Xxpm96Ve+zLb8TCXLdSOTdE0AsFd82E6UwdjtjoSIpE81lKyQc1pcCBuSpIiEoyvpnGv31fGLW+b5qWDdukQGvSkI0Fl25+yg7nstp7tnJK5qrzLg==\n\nARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;\n\n s=arcselector9901;\n\n h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;\n\n bh=kw/PY4LXDckGPezHxjLNpXsL3bo+VUyx2NzWdhH5TYY=;\n\n b=DZSqcpR3uOCgenUBFDnG3fhH+DnVFZqjBfo7Jgc5q7SiaB+OFx8cd9h+Fp2UySvEyqaTFXwxXwTNKmCajtVZqJacIU8qUKHFj0Y7Y85LO8ltk//94UW1NTFCCD1G2mqeMNsMny8P3DGGD2F2cp7Q0a1pu1DfCZum7w8SXtrO5zIcj5260xye118zWXbkUN7q0A3LWfehYz6jkHpb2diN2vDkCfqlSK68ev/TRDhs3M7OOCQM4qR2os0r/QSyfNRqPIlwphL0IK4xXm3P4qFSfiddAFXLQM7OHKxT6vdxkE5si7M6SjbTkiitaWYMOC4uJwspLXY3Atn9OLyZa7RUBw==\n\nARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=none; dmarc=none;\n\n dkim=none; arc=none\n\nDKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=hotmail.com;\n\n s=selector1;\n\n h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;\n\n bh=kw/PY4LXDckGPezHxjLNpXsL3bo+VUyx2NzWdhH5TYY=;\n\n b=Kqr/ZgfVxlkjoJ9sLu1vSMJnVJF8K0jpoiQYZ2Wo5JMaZI4weHpGnmXfSr0aDFqnZ9KEPFYx8rAmarPrWIoOCaGY1WAITdA/GUZa8k88mQo4MNQqSOPYQkNDaRwUBe1cuf2RjMl6YaXXtRGuuG/PvXgIS+GBcUqIAL+ROzDy2chtaEI9ODrhNk/UplCiyaPCOnq2+NoVhBBEOxZRoYxVZzU9zK3HdRfYSRvpIJXfZgwwDUDwgKJJwTv43jsu9gMdwGHemOI5refdJOUdpQudI67tasIdZVjmEHfh1AEcmsye668NMQuHHmCiJx1NJUkjnYRN07S1oa6vfw2ZED7pbQ==\n\nReceived: from VI1PR02MB6479.eurprd02.prod.outlook.com (2603:10a6:800:19a::13)\n\n by AM9PR02MB6548.eurprd02.prod.outlook.com (2603:10a6:20b:2d2::14) with\n\n Microsoft SMTP Server (version=TLS1_2,\n\n cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.5612.22; Wed, 14 Sep\n\n 2022 10:58:16 +0000\n\nReceived: from VI1PR02MB6479.eurprd02.prod.outlook.com\n\n ([fe80::88bb:a825:6bb0:ca51]) by VI1PR02MB6479.eurprd02.prod.outlook.com\n\n ([fe80::88bb:a825:6bb0:ca51%5]) with mapi id 15.20.5612.022; Wed, 14 Sep 2022\n\n 10:58:16 +0000\n\nFrom: maryvonne masseron-mandaba \n\nTo: \"Y.mandaba@hotmail.com\" , \"Y.mandaba@hotmail.com\"\n\n        , Marc MANDABA \n\nSubject: =?iso-8859-1?Q?Je_ne_demande_que_cela._J'ai_donn=E9_tout_le_reste,_d=E9j?=\n\n =?iso-8859-1?Q?=E0._?=\n\nThread-Topic: =?iso-8859-1?Q?Je_ne_demande_que_cela._J'ai_donn=E9_tout_le_reste,_d=E9j?=\n\n =?iso-8859-1?Q?=E0._?=\n\nThread-Index: AQHYyCiwewE4Q6BvBUGu0rkWLlWZog==\n\nDate: Wed, 14 Sep 2022 10:58:16 +0000\n\nMessage-ID: \n\nAccept-Language: fr-FR, en-US\n\nContent-Language: fr-FR\n\nX-MS-Has-Attach: yes\n\nX-MS-TNEF-Correlator:\n\nx-tmn: [9LRaPDuAkaYXCRirEYsijH/5AksUMEgk]\n\nx-ms-publictraffictype: Email\n\nx-ms-traf"
+}

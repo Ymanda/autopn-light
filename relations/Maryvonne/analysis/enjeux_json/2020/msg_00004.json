@@ -1,0 +1,24 @@
+{
+  "year": 2020,
+  "seq": 4,
+  "meta": {
+    "date": "2020-11-10",
+    "from": "maryvonne.masseron@free.fr",
+    "to": "marcmandaba@hotmail.com,",
+    "subject": "TR : TR : RE: Degat des eaux"
+  },
+  "proposals": [
+    {
+      "index": -4,
+      "etiquette": "Appartement Pergolèse (vente/location)",
+      "category": "MIN",
+      "duration": "LT",
+      "source": "AI",
+      "score": 1,
+      "matched_from": [
+        "ai_new"
+      ]
+    }
+  ],
+  "raw_excerpt": "🗕 Date : 2020-11-10\n👤 From : maryvonne.masseron@free.fr\n📨 To   : marcmandaba@hotmail.com, \n\t''maryvonne masseron-mandaba'' <maryvonnemm@hotmail.com>, \n\t'yannick mandaba' <y.mandaba@gmail.com>\n🧕 Subject : TR : TR : RE: Degat des eaux\n---\nSuivi Assurance Axa\nSCI MYM MANDABA\n9 rue Pergolese 75116 Paris\n\nmaryvonne masseron - 41 rue du puits-mauger 35000 rennes 0299302000 0680078113"
+}

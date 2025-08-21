@@ -1,0 +1,35 @@
+{
+  "year": 2013,
+  "seq": 33,
+  "meta": {
+    "date": "2013-05-26",
+    "from": "maryvonne masseron-mandaba <maryvonnemm@hotmail.com>",
+    "to": "\"y.mandaba@gmail.com\" <y.mandaba@gmail.com>, Marc Mandaba",
+    "subject": "impots papier à déposer ce jour"
+  },
+  "proposals": [
+    {
+      "index": -33,
+      "etiquette": "Impôts / fiscalité",
+      "category": "MIN",
+      "duration": "LT",
+      "source": "AI",
+      "score": 1,
+      "matched_from": [
+        "ai_new"
+      ]
+    },
+    {
+      "index": -33,
+      "etiquette": "Appartement Pergolèse (vente/location)",
+      "category": "MIN",
+      "duration": "LT",
+      "source": "AI",
+      "score": 1,
+      "matched_from": [
+        "ai_new"
+      ]
+    }
+  ],
+  "raw_excerpt": "🗕 Date : 2013-05-26\n👤 From : maryvonne masseron-mandaba <maryvonnemm@hotmail.com>\n📨 To   : \"y.mandaba@gmail.com\" <y.mandaba@gmail.com>, Marc Mandaba\n\t<marcmandaba@hotmail.com>\n🧕 Subject : impots papier à déposer ce jour\n---\nSCI DE CLERVILLE=\nindivision mandaba\npour vous 2ligne A         722ligne B         302ligne F          420\nje dclare pour yannick la moiti de ces sommes\n\n\nSCI M.Y.M.- MANDABA\npour chacun,  dclarer, 1/3 des sommes ci-dessous=\nligne A ( revenus bruts )       10 200ligne B ( frais )                           977ligne C ( interets d'emprunt)     555ligne F ( revenu net)               8 668\n2 890 euros, c'est la quote part du revenu foncier, que je dclare pour moi,  dclarer par chacun d'entre nous,je dposerai la dclaration de yannick, ce soir , pour ne pas avoir encore beaucoup de frais supplmentaires (agios),NB: votre compte indivision a t recrdit, par le service des impots, c'est vite fait  eux de tout saisir !\nPour pergolese, le dgt des eaux persiste, un devis a t fait = 4 500  = pour rparation de la douche: changement vacuation + bac de douche + carrelages; ( ceci au titre de rparations et entretien); et aussi en mme temps : changement des fentres en PVC et double vitrage pour salle d'eau et cuisine ( au titre conomie d'nergie ) = mme entreprise , et travaux faits en mme temps; tout compris dans le devis, c'est CB, le locataire, qui s'en occupe - il demande aussi un 2eme devis....tes-vous d'accord ? Par ailleurs , l'expert des assurances AXA, qui est venu, pense qu'il y a une autre fuite, venant de plus haut, vu l'tat du mur de la cuisine ...avec le voisin du dessous, quand il restera des fonds, nous allons faire faire une enqute par un plombier.mmm"
+}

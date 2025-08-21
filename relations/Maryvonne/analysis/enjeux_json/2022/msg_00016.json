@@ -1,0 +1,35 @@
+{
+  "year": 2022,
+  "seq": 16,
+  "meta": {
+    "date": "2022-09-20",
+    "from": "MYM MANDABA SCI <mymmandaba@gmail.com>",
+    "to": "contact@stares.fr",
+    "subject": "Prochaine AG pour 7 rue Pergolese paris"
+  },
+  "proposals": [
+    {
+      "index": -16,
+      "etiquette": "Visa / immigration",
+      "category": "MIN",
+      "duration": "LT",
+      "source": "AI",
+      "score": 1,
+      "matched_from": [
+        "ai_new"
+      ]
+    },
+    {
+      "index": -16,
+      "etiquette": "Appartement Pergolèse (vente/location)",
+      "category": "MIN",
+      "duration": "LT",
+      "source": "AI",
+      "score": 1,
+      "matched_from": [
+        "ai_new"
+      ]
+    }
+  ],
+  "raw_excerpt": "🗕 Date : 2022-09-20\n👤 From : MYM MANDABA SCI <mymmandaba@gmail.com>\n📨 To   : contact@stares.fr\n🧕 Subject : Prochaine AG pour 7 rue Pergolese paris\n---\nA madame Peyre de Lescure\nOu madame Rijo\nMerci de nous faire connaître la date envisagée pour la prochaine AG de la copropriété du 9 rue Pergolese, 75016 Paris\nRéf 573655\n30870\nSCI MANDABA\nje vous remercie \nMaryvonne Mandaba Masseron \n0783359723 \nGérante de la SCI MYM MANDABA \n--\nEnvoyé depuis l'application Outlook Email App pour Android"
+}

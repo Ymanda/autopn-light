@@ -1,0 +1,24 @@
+{
+  "year": 2018,
+  "seq": 43,
+  "meta": {
+    "date": "2018-05-17",
+    "from": "maryvonne masseron-mandaba <maryvonnemm@hotmail.com>",
+    "to": "Yannick Mandaba <y.mandaba@gmail.com>",
+    "subject": "il reste 2 fois 392 euros à prélever pour les impots"
+  },
+  "proposals": [
+    {
+      "index": -43,
+      "etiquette": "Impôts / fiscalité",
+      "category": "MIN",
+      "duration": "LT",
+      "source": "AI",
+      "score": 1,
+      "matched_from": [
+        "ai_new"
+      ]
+    }
+  ],
+  "raw_excerpt": "🗕 Date : 2018-05-17\n👤 From : maryvonne masseron-mandaba <maryvonnemm@hotmail.com>\n📨 To   : Yannick Mandaba <y.mandaba@gmail.com>\n🧕 Subject : il reste 2 fois 392 euros à prélever pour les impots\n---\nDate    [https://particuliers.secure.societegenerale.fr/img/restitution/pictohorlogebleu.gif]   Libell Montant\n09/05/2018              000001 VIR EUROPEEN EMIS LOGITEL POUR: MARYVONNE MASSERON 09 05 SG 01704 CPT 00050016474 REF: 1218128157275     -500,00 \n09/05/2018              000001 VIR EUROPEEN EMIS LOGITEL POUR: M.KUSNIEREK Gauthier 09 05 BQ 1450604410 CPT 72822801707 REF: 1218128159980      -450,00 \n25/04/2018              000001 VIR EUROPEEN EMIS LOGITEL POUR: M.ARMAND GUILLEMOTEAU 25 04 BQ 3000400120 CPT 00000137332 REF: 1218115116204     -700,00 \n25/04/2018              000001 VIR EUROPEEN EMIS LOGITEL POUR: M.KUSNIEREK Gauthier 25 04 BQ 1450604410 CPT 72822801707 REF: 1218115113376      -300,00 \n24/04/2018              VIREMENT        +2 000,00 \n12/04/2018              FRAIS DE TENUE DE COMPTE ACTIF  -6,00 \n26/03/2018              PRLV EUROP PONCTUEL 8105260759 POUR CPTE DE:D.G.F.I.P IMPOT B3001 ID: FR46ZZZ005002 MOTIF: 600095686919TLR1798030289066 TLR     -530,00 \n21/03/2018              REGULARISATION DE COMMISSION FRAIS SUR OPERATIONS CLIENTELE EXO FRAIS VIR INT   +16,00 \n26/02/2018              PRLV EUROP PONCTUEL 5106249055 POUR CPTE DE:D.G.F.I.P IMPOT B3001 ID: FR46ZZZ005002 MOTIF: 600095685887TLR1898003452991 TLR     -392,00 \n11/01/2018              FRAIS DE TENUE DE COMPTE ACTIF  -6,00"
+}

@@ -1,0 +1,24 @@
+{
+  "year": 2018,
+  "seq": 30,
+  "meta": {
+    "date": "2018-04-14",
+    "from": "maryvonne masseron-mandaba <maryvonnemm@hotmail.com>",
+    "to": "\"y.mandaba@gmail.com\" <y.mandaba@gmail.com>, BeeBaa <beebeau89@gmail.com>",
+    "subject": "a choisir ! un hotel est reservé à Formule 1 roissy au nom de DR masseron maryvonne pour la nuit du 28 au 29,"
+  },
+  "proposals": [
+    {
+      "index": -30,
+      "etiquette": "Frais bus Tristan",
+      "category": "MIN",
+      "duration": "LT",
+      "source": "AI",
+      "score": 1,
+      "matched_from": [
+        "ai_new"
+      ]
+    }
+  ],
+  "raw_excerpt": "🗕 Date : 2018-04-14\n👤 From : maryvonne masseron-mandaba <maryvonnemm@hotmail.com>\n📨 To   : \"y.mandaba@gmail.com\" <y.mandaba@gmail.com>, BeeBaa <beebeau89@gmail.com>\n🧕 Subject : a choisir ! un hotel est reservé à Formule 1 roissy au nom de DR masseron maryvonne pour la nuit du 28 au 29,\n---\nMarseille → Paris\n\n  *   ‹ \n  *   vendredi, 27 avr. \n  *   samedi, 28 avr. \n  *   dimanche, 29 avr. \n  *   › \n\nDépart/Arrivée\nDurée, correspondances\nTotal\n17 h 05\n4 h 10\nMarseille St. Charles\nParis CDG\n11:05 h\nDirect\n249,88 €\n\n20 h 40\n7 h 35\nMarseille St. Charles\nParis CDG\n10:55 h\nDirect\n249,88 €\nRéservé:\n[https://shop.flixbus.fr/img/man.png]3"
+}

@@ -1,0 +1,35 @@
+{
+  "year": 2025,
+  "seq": 19,
+  "meta": {
+    "date": "2025-02-13",
+    "from": "MYM MANDABA SCI <mymmandaba@gmail.com>",
+    "to": "Yannick Mandaba <y.mandaba@gmail.com>",
+    "subject": "Montri payé 2 fois"
+  },
+  "proposals": [
+    {
+      "index": -19,
+      "etiquette": "Dossier de bourse Tristan",
+      "category": "MIN",
+      "duration": "LT",
+      "source": "AI",
+      "score": 1,
+      "matched_from": [
+        "ai_new"
+      ]
+    },
+    {
+      "index": -19,
+      "etiquette": "Frais d'école / bus Tristan",
+      "category": "MIN",
+      "duration": "LT",
+      "source": "AI",
+      "score": 1,
+      "matched_from": [
+        "ai_new"
+      ]
+    }
+  ],
+  "raw_excerpt": "🗕 Date : 2025-02-13\n👤 From : MYM MANDABA SCI <mymmandaba@gmail.com>\n📨 To   : Yannick Mandaba <y.mandaba@gmail.com>\n🧕 Subject : Montri payé 2 fois\n---\nAvant de m'envoyer la facture, tu pouvais leur telephoner.\nCeci est le 2eme paiement.\nMerci de m'envoyer les 2 reçus.\n\nPour l'école, c'est pareil. Je paie régulièrement, chaque mois.\nJe peux contrôler car leur site est correct, et chaque versement est\ncomptabilisé.\n\nIl te reste à faire un recours, pour demander une prise en charge\nsupérieure pour la bourse. La lettre du secrétariat t'invite à le faire.\nOn peut économiser 5000 euros.\nSi tu expliques que tu n'as pas eu de revenus en 2023 et 2024, si ce n'est\nceux des 2 SCI, et sur lesquels sont deja payés les impôts sur le revenu en\nFrance.\n\nFais un effort."
+}

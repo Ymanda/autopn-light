@@ -1,0 +1,23 @@
+index,etiquette,parent_index,synonymes,category,duration,source,created_at,updated_at,owner_emailindex,etiquette,parent_index,synonymes,category,duration,source,created_at,updated_at,owner_email
+1,"Frais de scolarité et bus de Tristan MANDABA",1,"frais d'école|bus scolaire|transport scolaire",MAJ,LT,USR,2000-10-20,2000-10-20,y.mandaba@gmail.com
+2,"Activités de Tristan MANDABA",2,"activités extrascolaires|loisirs Tristan|cours/piano/sport",MAJ,LT,USR,2000-10-20,2000-10-20,y.mandaba@gmail.com
+3,"Manque à gagner: non‑location de Toaziki (depuis 2000‑10‑20)",3,"manque à gagner Toaziki|non location Toaziki|revenus locatifs Toaziki perdus",MAJ,LT,USR,2000-10-20,2000-10-20,y.mandaba@gmail.com
+4,"Location de Toaziki",4,"loyer Toaziki|mise en location Toaziki",MAJ,LT,USR,2000-10-20,2000-10-20,y.mandaba@gmail.com
+5,"Entretien de Toaziki",5,"réparations Toaziki|maintenance Toaziki|remise en état Toaziki",MAJ,LT,USR,2000-10-20,2000-10-20,y.mandaba@gmail.com
+6,"Location de Pergolèse",6,"loyer Pergolèse|mise en location Pergolèse",MAJ,LT,USR,2000-10-20,2000-10-20,y.mandaba@gmail.com
+7,"Vente de Pergolèse",7,"céder Pergolèse|cession Pergolèse|mise en vente Pergolèse",MAJ,LT,USR,2000-10-20,2000-10-20,y.mandaba@gmail.com
+8,"Financement de la construction soi 25 (terrain Bee)",8,"budget soi 25|chantier soi 25|travaux soi 25",MAJ,LT,USR,2000-10-20,2000-10-20,y.mandaba@gmail.com
+9,"Financement de la construction soi 17 (terrain Bee)",9,"budget soi 17|chantier soi 17|travaux soi 17",MAJ,LT,USR,2000-10-20,2000-10-20,y.mandaba@gmail.com
+10,"Versement des compensations Toaziki (décision du conseil)",10,"compensations Toaziki|indemnisation Toaziki|rente Toaziki",MAJ,LT,USR,2000-10-20,2000-10-20,y.mandaba@gmail.com
+11,Achat métal (argent) pour prod,11,,MIN,LT,AI,2025-08-18,2025-08-18,AI
+12,Appartement Pergolèse (vente/location),12,,MIN,LT,AI,2025-08-18,2025-08-18,AI
+13,Audit comptable / bourse,13,,MIN,LT,AI,2025-08-18,2025-08-18,AI
+14,Dossier de bourse Tristan,14,,MIN,LT,AI,2025-08-18,2025-08-18,AI
+15,Frais bus Tristan,15,,MIN,LT,AI,2025-08-18,2025-08-18,AI
+16,Frais d'école / bus Tristan,16,,MIN,LT,AI,2025-08-18,2025-08-18,AI
+17,Impôts / fiscalité,17,,MIN,LT,AI,2025-08-18,2025-08-18,AI
+18,Maison Toaziki (usage/location),18,,MIN,LT,AI,2025-08-18,2025-08-18,AI
+19,Paiement DHL / expédition,19,,MIN,LT,AI,2025-08-18,2025-08-18,AI
+20,Paiement salaires atelier,20,,MIN,LT,AI,2025-08-18,2025-08-18,AI
+21,Paiements via Western Union,21,,MIN,LT,AI,2025-08-18,2025-08-18,AI
+22,Visa / immigration,22,,MIN,LT,AI,2025-08-18,2025-08-18,AI

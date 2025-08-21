@@ -1,0 +1,35 @@
+{
+  "year": 2016,
+  "seq": 11,
+  "meta": {
+    "date": "2016-02-23",
+    "from": "maryvonne masseron-mandaba <maryvonnemm@hotmail.com>",
+    "to": "\"y.mandaba@gmail.com\" <y.mandaba@gmail.com>, BeeBaa <beebeau89@gmail.com>",
+    "subject": "voyage à Bangkok"
+  },
+  "proposals": [
+    {
+      "index": -11,
+      "etiquette": "Dossier de bourse Tristan",
+      "category": "MIN",
+      "duration": "LT",
+      "source": "AI",
+      "score": 1,
+      "matched_from": [
+        "ai_new"
+      ]
+    },
+    {
+      "index": -11,
+      "etiquette": "Impôts / fiscalité",
+      "category": "MIN",
+      "duration": "LT",
+      "source": "AI",
+      "score": 1,
+      "matched_from": [
+        "ai_new"
+      ]
+    }
+  ],
+  "raw_excerpt": "🗕 Date : 2016-02-23\n👤 From : maryvonne masseron-mandaba <maryvonnemm@hotmail.com>\n📨 To   : \"y.mandaba@gmail.com\" <y.mandaba@gmail.com>, BeeBaa <beebeau89@gmail.com>\n🧕 Subject : voyage à Bangkok\n---\nbonsoir, j'ai fait une erreur en programmant ce voyage. Les impots ne m'ont pas encore retir l'argent pour moi et yannick.Alors que je pensais que c'tait dj fait...Objectif pour moi : limiter les dpenses  ce qui est prvu :\n- la scolarit de Tristan ( prvoir une visite chez la pdiatre, pour lui demander son avis, cela aussi est son travail )Voir les trajets possibles ou non.Sur le site, je ne trouve pas les tarifs des trimestres.Voir aussi si Tristan pourra avoir une bourse, ce sera  6 ans, je crois, quand la scolarit est obligatoire, mais le prvoir, pour l'inscription dans l'anne sclolaire prcdente, cad  la rentre de ses 5 ans.\n- les travaux sur les dents de Yannick,  commencer cette semaine\n- une courrone pour moi, je vais abandonner la dent sur pivot, si c'est trop cher.\nJ'espre que vous tes bien rentrs.M"
+}
