@@ -4,8 +4,7 @@ This repository now ships only the two flows that proved reliable:
 
 1. Convert WhatsApp exports into an email-like plain text (`parse_whatsapp.py`)
 2. Analyse those emails with GPT and produce highlighted HTML + CSV digests (`sophism_report.py`)
-
-All personal archives, ad-hoc experiments, and unfinished side tools were removed. You control what gets analysed through a single config file and your private `data/` folder.
+3. BONUS :Payment monitoor and automatic reminders by email.
 
 ---
 
