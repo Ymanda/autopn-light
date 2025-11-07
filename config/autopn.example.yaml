@@ -1,0 +1,36 @@
+# Copy this file to config/autopn.yaml and adjust it to your setup.
+owner:
+  id: owner
+  name: "Your Name"
+  emails:
+    - "you@example.com"
+
+openai:
+  model: "gpt-4o-mini"
+  temperature: 0.6
+  sleep_between_requests: 0.25
+
+relations:
+  - id: "example"
+    name: "Example Relative"
+    emails:
+      - "relative@example.com"
+    whatsapp:
+      chat_export: "data/relations/example/raw/WhatsApp Chat.txt"
+      email_output_dir: "data/relations/example/whatsapp_emails"
+      subject: "WhatsApp"
+      recipient_label: "Your Name"
+      year_range:
+        from: 2000
+        to: 2030
+    email_archives:
+      dir: "data/relations/example/emails"
+    reports:
+      html_dir: "data/relations/example/reports"
+      csv_light: "data/relations/example/analysis/sophisms_light.csv"
+      csv_events: "data/relations/example/analysis/sophisms_events.csv"
+    context_history: |
+      - List a few bullet points describing the relationship, timeline and assets if that helps the LLM.
+    theme_keywords:
+      Finance: ["rent", "tuition", "transfer"]
+      Logistics: ["travel", "tickets", "passport"]

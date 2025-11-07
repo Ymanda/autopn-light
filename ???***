@@ -1,0 +1,71 @@
+def main():
+    args = parse_args()
+    ensure_openai_api_key()
+
+    config = load_config(args.config)
+    relation = resolve_relation(config, args.relation)
+    owner_name = owner_label(config)
+    relation_name = relation_label(relation)
+    owner_addrs = owner_emails(config)
+    relation_addrs = relation_emails(relation)
+    speaker_detector = build_speaker_detector(owner_addrs, relation_addrs, owner_name, relation_name)
+
+    archives_cfg = relation.get("email_archives") or {}
+    base_dir_value = args.base_dir or archives_cfg.get("dir")
+    if not base_dir_value:
+        raise ValueError("Missing email_archives.dir in config (or override with --base-dir).")
+    base_dir = expand_path(base_dir_value)
+    base_dir.mkdir(parents=True, exist_ok=True)
+
+    reports_cfg = relation.get("reports") or {}
+    html_dir = expand_path(reports_cfg.get("html_dir")) if reports_cfg.get("html_dir") else base_dir / "sophismes"
+    central_csv = expand_path(reports_cfg.get("csv_light")) if reports_cfg.get("csv_light") else base_dir / "sophismes_topics_master_light.csv"
+    events_csv = expand_path(reports_cfg.get("csv_events")) if reports_cfg.get("csv_events") else base_dir / "sophismes_topics_master.csv"
+
+    if args.clear_light and central_csv.exists():
+        central_csv.unlink()
+    ensure_csv_header(central_csv)
+
+    if args.clear_events and events_csv.exists():
+        events_csv.unlink()
+    events_sink = EventsSink(events_csv)
+
+    openai_cfg = openai_settings(config)
+    sleep_between = args.sleep if args.sleep is not None else openai_cfg.get("sleep_between_requests", 0.15)
+    model = args.model or openai_cfg.get("model")
+    temperature = args.temperature if args.temperature is not None else openai_cfg.get("temperature", 0.6)
+
+    taxonomy_file = expand_path(args.taxonomy_file)
+    canon_map, allowed_names, allowed_cats = load_taxonomy_yaml(str(taxonomy_file))
+
+    RUN_CONTEXT.update({
+        "owner_name": owner_name,
+        "relation_name": relation_name,
+        "relation_context": relation_context(relation),
+        "model": model,
+        "temperature": temperature,
+        "sleep_between": sleep_between,
+        "taxonomy_mode": args.taxonomy_mode,
+        "canon_map": canon_map,
+        "allowed_names": allowed_names,
+        "allowed_cats": allowed_cats,
+        "theme_keywords": relation_theme_keywords(relation),
+        "events_sink": events_sink,
+        "central_csv": central_csv,
+        "speaker_detector": speaker_detector,
+    })
+
+    years = resolve_years_arg(args, base_dir)
+    print(f"🗓  Years to process: {years}")
+
+    suffix = "_NORMALIZED" if args.normalized else ""
+    for year in years:
+        in_path = base_dir / f"emails_{year}{suffix}.txt"
+        if not in_path.exists():
+            print(f"⚠️  Skipping {year}: {in_path} introuvable")
+            continue
+        process_one_year(year, in_path, html_dir, args.max)
+
+
+if __name__ == "__main__":
+    main()
